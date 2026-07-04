@@ -1,342 +1,46 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Nex 艺术空间个人网站，展示艺术留学作品集导师履历、学生案例、个人作品、offer 成果、教学方法、资源文章与试听预约。"
+      content="A responsive black-and-white advertising platform page built with React, Tailwind CSS, and Framer Motion."
     />
-    <title>Nex 艺术空间 | Artist, Tutor, illustrator</title>
+    <title>X Advertising Platform Concept</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./styles.css?v=20260704-edit1" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="返回首页">
-        <span class="brand-icon"></span>
-        <span class="brand-text" data-editable="brand.name">Nex 艺术空间</span>
-      </a>
+    <div id="root"></div>
 
-      <nav class="nav" aria-label="主导航">
-        <a class="is-active" href="#top">首页</a>
-        <a href="#about">关于我</a>
-        <a href="#cases">学生案例</a>
-        <a href="#works">个人作品</a>
-        <a href="#offers">Offer成果</a>
-        <a href="#method">教学方法</a>
-        <a href="#articles">资源文章</a>
-        <a href="#contact">预约试听</a>
-      </nav>
-
-      <div class="header-actions">
-        <label class="search-box" aria-label="站内搜索">
-          <span></span>
-          <input id="siteSearch" type="search" placeholder="搜索专业、案例、院校..." />
-        </label>
-        <a class="plan-button" href="#contact">预约试听</a>
-      </div>
-
-      <button class="menu-button" type="button" aria-label="展开导航" aria-expanded="false">
-        <span></span>
-        <span></span>
-      </button>
-    </header>
-
-    <main id="top">
-      <section class="hero-section">
-        <div class="hero-copy">
-          <p class="eyebrow" data-editable="home.kicker">ARTIST · TUTOR · ILLUSTRATOR</p>
-          <h1 data-editable="home.title">Nex 艺术空间</h1>
-          <p data-editable="home.summary">
-            5-6 年艺术留学作品集辅导经验，专注艺术人文、视觉叙事与跨学科创作路径。这里集中展示个人履历、学生案例、offer 成果和试听沟通材料。
-          </p>
-          <div class="hero-actions">
-            <a class="primary-button" href="#cases">查看学生案例</a>
-            <a class="ghost-button" href="#offers">查看 offer 成果</a>
-          </div>
-        </div>
-
-        <div class="hero-panel" aria-label="首页重点信息">
-          <div class="panel-stat">
-            <span data-editable="home.stat1Label">经验</span>
-            <strong data-editable="home.stat1Value">5-6 年</strong>
-          </div>
-          <div class="panel-stat">
-            <span data-editable="home.stat2Label">方向</span>
-            <strong data-editable="home.stat2Value">艺术人文</strong>
-          </div>
-          <div class="panel-stat">
-            <span data-editable="home.stat3Label">成果</span>
-            <strong data-editable="home.stat3Value">Offer / 案例库</strong>
-          </div>
-        </div>
-      </section>
-
-      <section class="section home-dashboard" aria-label="首页导览">
-        <article>
-          <span>01</span>
-          <h2 data-editable="home.card1Title">Artist, Tutor, illustrator</h2>
-          <p data-editable="home.card1Text">用个人创作能力和教学经验共同支撑作品集判断。</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h2 data-editable="home.card2Title">Offer 成果</h2>
-          <p data-editable="home.card2Text">按院校、专业、年份和匿名学生编号整理录取结果。</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h2 data-editable="home.card3Title">学生案例</h2>
-          <p data-editable="home.card3Text">展示学生起点、问题、策略、过程、最终作品与 offer。</p>
-        </article>
-      </section>
-
-      <section id="about" class="section">
-        <div class="section-title">
-          <div>
-            <p class="eyebrow">ABOUT</p>
-            <h2 data-editable="about.title">关于我</h2>
-          </div>
-          <p data-editable="about.lead">
-            这一页用于建立个人可信度：你是谁、为什么能指导学生、你如何判断作品集项目。
-          </p>
-        </div>
-
-        <div class="about-layout">
-          <figure class="profile-portrait">
-            <img
-              data-image-key="about.portrait"
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80"
-              alt="Nex 艺术空间导师肖像"
-            />
-            <figcaption data-editable="about.caption">Nex 艺术空间 / Artist, Tutor, illustrator</figcaption>
-          </figure>
-
-          <div class="profile-grid">
-            <article>
-              <span>PROFILE</span>
-              <h3>个人简介</h3>
-              <p data-editable="about.bio">艺术留学作品集导师，长期带领学生完成从兴趣发掘、项目调研到最终作品集呈现的完整申请流程。</p>
-            </article>
-            <article>
-              <span>EDUCATION</span>
-              <h3>教育背景</h3>
-              <p data-editable="about.education">可填写毕业院校、专业方向、交换经历、展览或研究经历。</p>
-            </article>
-            <article>
-              <span>EXPERIENCE</span>
-              <h3>工作经历</h3>
-              <p data-editable="about.work">5-6 年作品集辅导经验，带过多方向、多国家申请案例。</p>
-            </article>
-            <article>
-              <span>SPECIALTY</span>
-              <h3>擅长专业</h3>
-              <p data-editable="about.specialty">纯艺、插画、视觉传达、交互、空间、装置、跨学科与艺术人文方向。</p>
-            </article>
-            <article>
-              <span>PHILOSOPHY</span>
-              <h3>指导理念</h3>
-              <p data-editable="about.philosophy">不只改图，而是帮助学生建立项目逻辑、研究路径和清晰表达。</p>
-            </article>
-            <article>
-              <span>INSTITUTION</span>
-              <h3>过往机构或项目经验</h3>
-              <p data-editable="about.institution">可填写曾合作机构、课程项目、公开讲座、展览项目或企业合作经历。</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="cases" class="section">
-        <div class="section-title">
-          <div>
-            <p class="eyebrow">STUDENT CASES</p>
-            <h2 data-editable="cases.title">学生案例</h2>
-          </div>
-          <p data-editable="cases.lead">
-            核心页面。每个案例都要讲清楚学生基础、问题、辅导策略、项目过程、最终作品和 offer 结果。
-          </p>
-        </div>
-
-        <div class="case-filters" aria-label="学生案例筛选">
-          <select data-filter="major" aria-label="按专业筛选">
-            <option value="all">全部专业</option>
-            <option value="视觉传达">视觉传达</option>
-            <option value="纯艺">纯艺</option>
-            <option value="交互设计">交互设计</option>
-          </select>
-          <select data-filter="country" aria-label="按申请国家筛选">
-            <option value="all">全部国家</option>
-            <option value="英国">英国</option>
-            <option value="美国">美国</option>
-            <option value="欧洲">欧洲</option>
-          </select>
-          <select data-filter="foundation" aria-label="按学生基础筛选">
-            <option value="all">全部基础</option>
-            <option value="零基础">零基础</option>
-            <option value="转专业">转专业</option>
-            <option value="有基础">有基础</option>
-          </select>
-          <select data-filter="result" aria-label="按录取结果筛选">
-            <option value="all">全部结果</option>
-            <option value="已录取">已录取</option>
-            <option value="奖学金">奖学金</option>
-          </select>
-        </div>
-
-        <div class="case-grid detailed">
-          <article class="case-card" data-major="视觉传达" data-country="英国" data-school="UAL" data-foundation="转专业" data-result="已录取">
-            <img data-image-key="cases.case1.image" src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=80" alt="视觉传达学生案例" />
-            <div class="case-info">
-              <span data-editable="cases.case1.meta">视觉传达 / 英国 / UAL / 转专业 / 已录取</span>
-              <h3 data-editable="cases.case1.title">社会议题视觉系统项目</h3>
-              <dl>
-                <div><dt>学生起点</dt><dd data-editable="cases.case1.start">有视觉兴趣，但项目主题分散，research 线索不足。</dd></div>
-                <div><dt>核心问题</dt><dd data-editable="cases.case1.problem">作品像单张海报集合，缺少连续方法和概念推进。</dd></div>
-                <div><dt>辅导策略</dt><dd data-editable="cases.case1.strategy">重建议题框架、视觉实验表和 portfolio 叙事结构。</dd></div>
-                <div><dt>项目过程</dt><dd data-editable="cases.case1.process">从资料板、草图、材料测试推进到四个完整项目页面。</dd></div>
-                <div><dt>最终作品</dt><dd data-editable="cases.case1.final">形成社会议题视觉系统与完整作品集排版。</dd></div>
-                <div><dt>Offer结果</dt><dd data-editable="cases.case1.offer">英国方向多枚 offer。</dd></div>
-              </dl>
-            </div>
-          </article>
-
-          <article class="case-card" data-major="纯艺" data-country="美国" data-school="SAIC" data-foundation="有基础" data-result="奖学金">
-            <img data-image-key="cases.case2.image" src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=900&q=80" alt="纯艺学生案例" />
-            <div class="case-info">
-              <span data-editable="cases.case2.meta">纯艺 / 美国 / SAIC / 有基础 / 奖学金</span>
-              <h3 data-editable="cases.case2.title">身份记忆与跨媒介装置</h3>
-              <dl>
-                <div><dt>学生起点</dt><dd data-editable="cases.case2.start">绘画能力较强，但个人主题和媒介语言不稳定。</dd></div>
-                <div><dt>核心问题</dt><dd data-editable="cases.case2.problem">作品情绪明确，但缺少艺术史、材料和空间语境。</dd></div>
-                <div><dt>辅导策略</dt><dd data-editable="cases.case2.strategy">围绕身份记忆建立材料实验和影像装置路径。</dd></div>
-                <div><dt>项目过程</dt><dd data-editable="cases.case2.process">从绘画系列延展到影像、文本、装置和展陈方案。</dd></div>
-                <div><dt>最终作品</dt><dd data-editable="cases.case2.final">完成跨媒介 portfolio 和面试叙述。</dd></div>
-                <div><dt>Offer结果</dt><dd data-editable="cases.case2.offer">美国艺术院校录取并获得奖学金。</dd></div>
-              </dl>
-            </div>
-          </article>
-
-          <article class="case-card" data-major="交互设计" data-country="欧洲" data-school="ECAL" data-foundation="零基础" data-result="已录取">
-            <img data-image-key="cases.case3.image" src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80" alt="交互设计学生案例" />
-            <div class="case-info">
-              <span data-editable="cases.case3.meta">交互设计 / 欧洲 / ECAL / 零基础 / 已录取</span>
-              <h3 data-editable="cases.case3.title">服务系统与原型验证</h3>
-              <dl>
-                <div><dt>学生起点</dt><dd data-editable="cases.case3.start">转向交互申请，对用户研究和原型表达不熟悉。</dd></div>
-                <div><dt>核心问题</dt><dd data-editable="cases.case3.problem">概念停留在功能想法，没有调研证据和测试过程。</dd></div>
-                <div><dt>辅导策略</dt><dd data-editable="cases.case3.strategy">建立访谈、用户旅程、服务蓝图和可测试原型。</dd></div>
-                <div><dt>项目过程</dt><dd data-editable="cases.case3.process">从问题定义推进到低保真测试、视觉系统和最终演示。</dd></div>
-                <div><dt>最终作品</dt><dd data-editable="cases.case3.final">完成交互项目、服务流程图和 portfolio 页面。</dd></div>
-                <div><dt>Offer结果</dt><dd data-editable="cases.case3.offer">欧洲设计院校录取。</dd></div>
-              </dl>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="works" class="section">
-        <div class="section-title">
-          <div>
-            <p class="eyebrow">PERSONAL WORKS</p>
-            <h2 data-editable="works.title">个人作品</h2>
-          </div>
-          <p data-editable="works.lead">精选即可，重点证明你的审美、创作能力和专业判断力。</p>
-        </div>
-        <div class="works-grid">
-          <article class="work-card featured-work">
-            <img data-image-key="works.work1.image" src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=80" alt="个人精选作品" />
-            <div>
-              <span data-editable="works.work1.meta">Selected Project</span>
-              <h3 data-editable="works.work1.title">Research-based visual practice</h3>
-              <p data-editable="works.work1.text">这里可以放展览、出版、影像、装置、插画、品牌视觉或学校项目。</p>
-            </div>
-          </article>
-          <article class="work-card"><span>01</span><h3 data-editable="works.work2.title">图像研究与视觉系统</h3><p data-editable="works.work2.text">展示你对图像逻辑、风格统一和视觉叙事的判断。</p></article>
-          <article class="work-card"><span>02</span><h3 data-editable="works.work3.title">材料实验与跨媒介表达</h3><p data-editable="works.work3.text">展示媒介实验、材料探索和空间/装置意识。</p></article>
-        </div>
-      </section>
-
-      <section id="offers" class="section">
-        <div class="section-title">
-          <div>
-            <p class="eyebrow">OFFER WALL</p>
-            <h2 data-editable="offers.title">Offer / 成果墙</h2>
-          </div>
-          <p data-editable="offers.lead">展示学校 logo、专业方向、年份和匿名学生编号。真实截图上线前请打码并取得授权。</p>
-        </div>
-        <div class="offer-grid detailed">
-          <article><strong data-editable="offers.item1.school">UAL</strong><span data-editable="offers.item1.info">视觉传达 · 2026 · S-001</span></article>
-          <article><strong data-editable="offers.item2.school">RCA</strong><span data-editable="offers.item2.info">服务设计 · 2026 · S-002</span></article>
-          <article><strong data-editable="offers.item3.school">RISD</strong><span data-editable="offers.item3.info">纯艺 · 2025 · S-003</span></article>
-          <article><strong data-editable="offers.item4.school">Pratt</strong><span data-editable="offers.item4.info">插画 · 2025 · S-004</span></article>
-          <article><strong data-editable="offers.item5.school">SAIC</strong><span data-editable="offers.item5.info">跨媒介 · 2024 · S-005</span></article>
-          <article><strong data-editable="offers.item6.school">Parsons</strong><span data-editable="offers.item6.info">交互设计 · 2024 · S-006</span></article>
-        </div>
-      </section>
-
-      <section id="method" class="section">
-        <div class="section-title">
-          <div>
-            <p class="eyebrow">TEACHING METHOD</p>
-            <h2 data-editable="method.title">教学方法</h2>
-          </div>
-          <p data-editable="method.lead">展示你的工作流，让家长和学生看到你如何管理一个完整申请项目。</p>
-        </div>
-        <div class="method-grid">
-          <article><span>01</span><h3 data-editable="method.step1.title">前期诊断</h3><p data-editable="method.step1.text">评估基础、目标院校、专业方向和现有作品问题。</p></article>
-          <article><span>02</span><h3 data-editable="method.step2.title">Research</h3><p data-editable="method.step2.text">建立主题资料库、案例分析和问题定义。</p></article>
-          <article><span>03</span><h3 data-editable="method.step3.title">Concept development</h3><p data-editable="method.step3.text">将兴趣转化为可执行、可迭代、可表达的项目概念。</p></article>
-          <article><span>04</span><h3 data-editable="method.step4.title">项目推进</h3><p data-editable="method.step4.text">每周推进草图、实验、模型、测试和成品制作。</p></article>
-          <article><span>05</span><h3 data-editable="method.step5.title">作品集排版</h3><p data-editable="method.step5.text">整理项目叙事、页面节奏、图文关系和最终 PDF。</p></article>
-          <article><span>06</span><h3 data-editable="method.step6.title">文书 / 面试 / 节奏管理</h3><p data-editable="method.step6.text">配合文书素材、面试表达和申请节点管理。</p></article>
-        </div>
-      </section>
-
-      <section id="articles" class="section">
-        <div class="section-title">
-          <div>
-            <p class="eyebrow">ARTICLES</p>
-            <h2 data-editable="articles.title">资源 / 文章</h2>
-          </div>
-          <p data-editable="articles.lead">写艺术留学、作品集准备、专业选择、申请误区和案例复盘类文章。</p>
-        </div>
-        <div class="article-grid">
-          <article><span data-editable="articles.article1.meta">Guide 01</span><h3 data-editable="articles.article1.title">作品集准备的三个常见误区</h3><p data-editable="articles.article1.text">避免只堆成品、忽略调研、没有项目逻辑。</p></article>
-          <article><span data-editable="articles.article2.meta">Guide 02</span><h3 data-editable="articles.article2.title">不同专业如何选择项目主题？</h3><p data-editable="articles.article2.text">从专业目标、个人兴趣和院校偏好之间建立匹配。</p></article>
-          <article><span data-editable="articles.article3.meta">Case Review</span><h3 data-editable="articles.article3.title">一个转专业学生的案例复盘</h3><p data-editable="articles.article3.text">用过程图和导师复盘解释学生如何从零散想法走向完整作品。</p></article>
-        </div>
-      </section>
-
-      <section id="contact" class="contact-section">
-        <div>
-          <p class="eyebrow">CONTACT</p>
-          <h2 data-editable="contact.title">联系 / 预约试听</h2>
-          <p data-editable="contact.text">可放微信二维码、邮箱、小红书、公众号、Instagram、Behance 或预约表单。建议试听前把相关专业案例链接发给学生和家长。</p>
-          <div class="social-links">
-            <a data-editable="contact.email" href="mailto:hello@example.com">hello@example.com</a>
-            <a data-editable="contact.xhs" href="#">小红书：Nex艺术空间</a>
-            <a data-editable="contact.instagram" href="#">Instagram / Behance</a>
-          </div>
-        </div>
-        <div class="qr-card">
-          <img data-image-key="contact.qr" src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=Nex%20Art%20Space" alt="预约试听二维码" />
-          <span data-editable="contact.qrCaption">上传你的微信二维码或预约表单二维码</span>
-          <a class="plan-button large" href="mailto:hello@example.com">预约试听</a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p data-editable="footer.text">© 2026 Nex 艺术空间. 学生案例展示前请取得授权并处理个人隐私。</p>
-      <a href="?edit=true">进入编辑模式</a>
-    </footer>
-
-    <script src="./script.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@18.2.0",
+          "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+          "framer-motion": "https://esm.sh/framer-motion@10.18.0?external=react"
+        }
+      }
+    </script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" data-type="module" src="./script.js?v=20260704-edit1"></script>
   </body>
 </html>
